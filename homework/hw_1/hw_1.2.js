@@ -1,11 +1,11 @@
-function zero(value) {
-  if (value == undefined) return 0;
+const zero = (value) => {
+  if (value === undefined) return 0;
   else {
     switch (value.charAt(0)) {
       case "+":
-        return 0 + value.charAt(1) * 1;
+        return 0 + +value.charAt(1);
       case "-":
-        return 0 - value.charAt(1) * 1;
+        return 0 - +value.charAt(1);
       case "*":
         return 0 * value.charAt(1);
       case "/":
@@ -14,16 +14,16 @@ function zero(value) {
         return value;
     }
   }
-}
+};
 
-function one(value) {
-  if (value == undefined) return 1;
+const one = (value) => {
+  if (value === undefined) return 1;
   else {
     switch (value.charAt(0)) {
       case "+":
-        return 1 + value.charAt(1) * 1;
+        return 1 + +value.charAt(1);
       case "-":
-        return 1 - value.charAt(1) * 1;
+        return 1 - +value.charAt(1);
       case "*":
         return 1 * value.charAt(1);
       case "/":
@@ -32,16 +32,16 @@ function one(value) {
         return value;
     }
   }
-}
+};
 
-function two(value) {
-  if (value == undefined) return 2;
+const two = (value) => {
+  if (value === undefined) return 2;
   else {
     switch (value.charAt(0)) {
       case "+":
-        return 2 + value.charAt(1) * 1;
+        return 2 + +value.charAt(1);
       case "-":
-        return 2 - value.charAt(1) * 1;
+        return 2 - +value.charAt(1);
       case "*":
         return 2 * value.charAt(1);
       case "/":
@@ -50,16 +50,16 @@ function two(value) {
         return value;
     }
   }
-}
+};
 
-function three(value) {
-  if (value == undefined) return 3;
+const three = (value) => {
+  if (value === undefined) return 3;
   else {
     switch (value.charAt(0)) {
       case "+":
-        return 3 + value.charAt(1) * 1;
+        return 3 + +value.charAt(1);
       case "-":
-        return 3 - value.charAt(1) * 1;
+        return 3 - +value.charAt(1);
       case "*":
         return 3 * value.charAt(1);
       case "/":
@@ -68,16 +68,16 @@ function three(value) {
         return value;
     }
   }
-}
+};
 
-function four(value) {
-  if (value == undefined) return 4;
+const four = (value) => {
+  if (value === undefined) return 4;
   else {
     switch (value.charAt(0)) {
       case "+":
-        return 4 + value.charAt(1) * 1;
+        return 4 + +value.charAt(1);
       case "-":
-        return 4 - value.charAt(1) * 1;
+        return 4 - +value.charAt(1);
       case "*":
         return 4 * value.charAt(1);
       case "/":
@@ -86,16 +86,16 @@ function four(value) {
         return value;
     }
   }
-}
+};
 
-function five(value) {
-  if (value == undefined) return 5;
+const five = (value) => {
+  if (value === undefined) return 5;
   else {
     switch (value.charAt(0)) {
       case "+":
-        return 5 + value.charAt(1) * 1;
+        return 5 + +value.charAt(1);
       case "-":
-        return 5 - value.charAt(1) * 1;
+        return 5 - +value.charAt(1);
       case "*":
         return 5 * value.charAt(1);
       case "/":
@@ -104,16 +104,16 @@ function five(value) {
         return value;
     }
   }
-}
+};
 
-function six(value) {
-  if (value == undefined) return 6;
+const six = (value) => {
+  if (value === undefined) return 6;
   else {
     switch (value.charAt(0)) {
       case "+":
-        return 6 + value.charAt(1) * 1;
+        return 6 + +value.charAt(1);
       case "-":
-        return 6 - value.charAt(1) * 1;
+        return 6 - +value.charAt(1);
       case "*":
         return 6 * value.charAt(1);
       case "/":
@@ -122,16 +122,16 @@ function six(value) {
         return value;
     }
   }
-}
+};
 
-function seven(value) {
-  if (value == undefined) return 7;
+const seven = (value) => {
+  if (value === undefined) return 7;
   else {
     switch (value.charAt(0)) {
       case "+":
-        return 7 + value.charAt(1) * 1;
+        return 7 + +value.charAt(1);
       case "-":
-        return 7 - value.charAt(1) * 1;
+        return 7 - +value.charAt(1);
       case "*":
         return 7 * value.charAt(1);
       case "/":
@@ -140,16 +140,16 @@ function seven(value) {
         return value;
     }
   }
-}
+};
 
-function eight(value) {
-  if (value == undefined) return 8;
+const eight = (value) => {
+  if (value === undefined) return 8;
   else {
     switch (value.charAt(0)) {
       case "+":
-        return 8 + value.charAt(1) * 1;
+        return 8 + +value.charAt(1);
       case "-":
-        return 8 - value.charAt(1) * 1;
+        return 8 - +value.charAt(1);
       case "*":
         return 8 * value.charAt(1);
       case "/":
@@ -158,16 +158,16 @@ function eight(value) {
         return value;
     }
   }
-}
+};
 
-function nine(value) {
-  if (value == undefined) return 9;
+const nine = (value) => {
+  if (value === undefined) return 9;
   else {
     switch (value.charAt(0)) {
       case "+":
-        return 9 + value.charAt(1) * 1;
+        return 9 + +value.charAt(1);
       case "-":
-        return 9 - value.charAt(1) * 1;
+        return 9 - +value.charAt(1);
       case "*":
         return 9 * value.charAt(1);
       case "/":
@@ -176,21 +176,21 @@ function nine(value) {
         return value;
     }
   }
-}
+};
 
 function plus(number) {
-  return "+" + number;
+  return `+${number}`;
 }
 
 function minus(number) {
-  return "-" + number;
+  return `-${number}`;
 }
 
 function times(number) {
-  return "*" + number;
+  return `*${number}`;
 }
 
 function dividedBy(number) {
   if (number == 0) return "Division by zero!";
-  else return "/" + number;
+  else return `/${number}`;
 }
