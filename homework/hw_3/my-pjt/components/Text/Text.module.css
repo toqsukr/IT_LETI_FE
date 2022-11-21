@@ -2,7 +2,6 @@
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   font-size: medium;
-  font-style: italic;
-  color: rgba(0, 0, 0, 0.378);
-  padding: 20px;
+  color: rgba(255, 255, 255, 0.707);
+  padding-top: 10px;
 }
