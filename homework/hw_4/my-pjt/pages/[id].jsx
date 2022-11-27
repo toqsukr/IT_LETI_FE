@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import "bootstrap/dist/css/bootstrap.css";
 import { Card } from "../components/Card/Card";
 import Head from "next/head";
+import css from "./id.module.css";
 
 const BlogItem = ({ data }) => {
   const router = useRouter();
@@ -14,8 +15,8 @@ const BlogItem = ({ data }) => {
       </Head>
       {
         <div
+          id={css.card}
           className="container container-lg container-md container-sm"
-          style={{ maxWidth: "600px", maxHeight: "600px" }}
         >
           <Card url={data.url} title={data.title} />
         </div>
