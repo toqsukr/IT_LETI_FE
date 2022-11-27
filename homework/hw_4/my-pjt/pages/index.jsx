@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "../components/Button/Button";
 import { Gallery } from "../components/Gallery/Gallery";
 import { Text } from "../components/Text/Text";
+import css from "./gallery.module.css";
 
-export default function MyPage() {
-  let [content, setContent] = useState(null);
-  let [title, setTitle] = useState("");
-  let [url, setUrl] = useState("");
-  let [page, setPage] = useState(0);
+export default function MyPage({ data }) {
+  const [content, setContent] = useState(data);
+  const [title, setTitle] = useState("");
+  const [url, setUrl] = useState("");
+  const [page, setPage] = useState(0);
+
   function handleClick(e) {
     e.preventDefault();
     if (!url || !title) return;
@@ -16,18 +18,12 @@ export default function MyPage() {
     setUrl("");
   }
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/photos")
-      .then((res) => res.json())
-      .then((obj) => setContent(obj));
-  }, []);
-
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-dark">
         <div
           className="container container-lg container-md container-sm"
-          style={{ marginRight: "30%" }}
+          id={css.block}
         >
           <form onSubmit={handleClick}>
             <div>
@@ -68,4 +64,15 @@ export default function MyPage() {
       )}
     </div>
   );
+}
+
+export async function getStaticProps(context) {
+  const obj = await fetch("https://jsonplaceholder.typicode.com/photos").then(
+    (res) => res.json()
+  );
+  return {
+    props: {
+      data: obj,
+    },
+  };
 }
